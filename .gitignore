@@ -1,0 +1,6 @@
+# Environment variables
+.env
+
+# Cache files
+__pycache__/
+*.pycgit 
