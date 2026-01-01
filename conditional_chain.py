@@ -51,3 +51,5 @@ chain = classifier_chain | branch_chain
 result = chain.invoke({'feedback': 'This is a terrible smartphone'})
 
 print(result)
+
+chain.get_graph().print_ascii()
