@@ -10,17 +10,19 @@ model = ChatOpenAI()
 parser = StrOutputParser()
 
 template = PromptTemplate(
-    template="Generate key 5 facts on {topic}",
-    input_variables=['topic']
+    template="Generate 5 interesting facts about {topic}",
+    input_variables=["topic"]
 )
 
-user_input = input("Enter the topic ")
+user_input = input("Please provide a topic ")
 
-# prompt = template.invoke({'topic': user_input})
+# prompt = template.invoke(user_input)
 
 # result = model.invoke(prompt)
 
 # print(result.content)
+
+# result = chain.invoke(user_input)
 
 chain = template | model | parser
 
@@ -30,3 +32,5 @@ print(result)
 
 chain.get_graph().print_ascii()
 
+
+ 
