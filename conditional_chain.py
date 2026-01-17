@@ -31,12 +31,12 @@ classifier_chain = prompt1 | model | parser2
 # print(result)
 
 prompt2 = PromptTemplate(
-    template="Write an appropriate response to this positive feedback ]n {feedback}",
+    template="Write an appropriate response to this positive feedback \n {feedback}",
     input_variables=['feedback']
 )
 
 prompt3 = PromptTemplate(
-    template="Write an appropriate response to this negative feedback ]n {feedback}",
+    template="Write an appropriate response to this negative feedback \n {feedback}",
     input_variables=['feedback']
 )
 
